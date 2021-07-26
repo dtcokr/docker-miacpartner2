@@ -1,6 +1,6 @@
 # docker-miacpartner2
 
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/dtcokr/docker-miacpartner2/main)
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/dtcokr/miacpartner2/latest)
 ![Docker Pulls](https://img.shields.io/docker/pulls/dtcokr/miacpartner2)
 ![GitHub last commit](https://img.shields.io/github/last-commit/dtcokr/docker-miacpartner2)
 

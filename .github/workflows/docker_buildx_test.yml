@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - 'test'
-    paths-ignore:
-      - '.github/workflows/**'
   workflow_dispatch:
 
 jobs:

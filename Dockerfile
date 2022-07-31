@@ -7,7 +7,7 @@ RUN apt-get update \
     && pip install --upgrade pip \
     && pip install HAP-python[QRCode] python-miio Flask-SQLAlchemy \
     && rm -rf master.zip \
-    && apt-get purge -y wget unzip \
+    && apt-get purge -y wget unzip gcc build-essential \
     && apt-get autoclean \
     && apt-get autoremove
 

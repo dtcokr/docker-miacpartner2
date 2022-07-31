@@ -8,8 +8,8 @@ RUN apt-get update \
     && pip install HAP-python[QRCode] python-miio Flask-SQLAlchemy \
     && rm -rf master.zip \
     && apt-get purge -y wget unzip gcc build-essential \
-    && apt-get autoclean \
-    && apt-get autoremove
+    && apt-get autoclean -y \
+    && apt-get autoremove -y
 
 WORKDIR /HomeKit-MiAcPartnerMcn02-master
 

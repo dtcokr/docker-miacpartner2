@@ -1,10 +1,15 @@
-FROM python:3.9.6-slim-buster
+FROM python:3.10.5-slim-bullseye
 
-RUN apt-get update
-RUN apt-get install -y wget unzip libavahi-compat-libdnssd-dev
-RUN wget https://github.com/Hcreak/HomeKit-MiAcPartnerMcn02/archive/refs/heads/master.zip
-RUN unzip master.zip
-RUN pip3 install HAP-python[QRCode] python-miio Flask-SQLAlchemy
+RUN apt-get update \
+    && apt-get install -y wget unzip libavahi-compat-libdnssd-dev gcc build-essential \
+    && wget https://github.com/Hcreak/HomeKit-MiAcPartnerMcn02/archive/refs/heads/master.zip \
+    && unzip master.zip \
+    && pip install --upgrade pip \
+    && pip install HAP-python[QRCode] python-miio Flask-SQLAlchemy \
+    && rm -rf master.zip \
+    && apt-get purge -y wget unzip gcc build-essential \
+    && apt-get autoclean -y \
+    && apt-get autoremove -y
 
 WORKDIR /HomeKit-MiAcPartnerMcn02-master
 
